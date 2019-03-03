@@ -1,0 +1,20 @@
+{
+  "name": "treetmeet-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^11.10.4",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.3333"
+  }
+}
