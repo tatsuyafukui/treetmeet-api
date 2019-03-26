@@ -1,4 +1,4 @@
-# README
+# Nomy API
 
 # 使い方
 
