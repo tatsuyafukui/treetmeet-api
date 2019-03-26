@@ -4,8 +4,9 @@ const app = express();
 const server = http.createServer(app);
 const con = require('./mysqlConnection');
 const passport = require('passport');
-app.use(passport.initialize());
 
+app.use(passport.initialize());
+app.use(express.logger());
 app.use((req: any, res: any, next: any) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
