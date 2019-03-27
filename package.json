@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon config/dist/server.js & webpack --config config/webpack.config.dev.js",
+    "start": "nodemon config/dist/server.js & webpack --config config/webpack.config.prod.js",
     "build": "tsc",
     "watch": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
