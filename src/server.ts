@@ -3,10 +3,11 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 const con = require('./mysqlConnection');
-const passport = require('passport');
+const logger = require('morgan');
 
-app.use(passport.initialize());
-app.use(express.logger());
+const port = process.env.PORT || 3001;
+
+app.use(logger('short'));
 app.use((req: any, res: any, next: any) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -26,7 +27,7 @@ app.get('/', async (req: any, res: any) => {
     res.json(json);
 });
 
-server.listen(3001, () => {
-    console.log(`server start port ${3001}`);
-    // console.log(process.env);
+server.listen(port, () => {
+    console.log(`server start port ${port}`);
+    console.log(process.env.NODE_ENV);
 });
